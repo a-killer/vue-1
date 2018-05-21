@@ -6,6 +6,7 @@ import About from '@/pages/About'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history', // this removed the # from urls
   routes: [
     {
       path: '/',
