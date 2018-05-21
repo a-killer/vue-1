@@ -8,6 +8,9 @@
 <script>
 export default {
   name: 'Home',
+  beforeCreate: function() {
+      document.body.className = 'home';
+  },
   data () {
     return {
       msg: 'Hidden Agency'

@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <img src="./assets/images/1.jpg" height="100">
+    <img src="./assets/images/1.gif" height="200" class="hector">
     <nav>
       <ul>
 			<li><router-link :to="{ name: 'Home' }">Home</router-link></li>
@@ -46,7 +46,7 @@ export default {
     padding: 30px;
     border-radius: 10px;
     margin: 50px auto 0 auto;
-    height: calc(60% - 50px);
+    height: calc(90% - 50px);
   }
 
   .page {
