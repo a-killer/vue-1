@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="columns is-centered">
                     <div class="column is-narrow text-center">
-                          <h1>Hidden {{ msg }}</h1>  
+                          <h1>{{ msg }}</h1>  
                           <p>Sapiente consequatur facilis consequuntur, voluptatibus, voluptas aut mollitia aspernatur.</p>
                     </div>
               </div>    
@@ -46,7 +46,7 @@ export default {
   },
   data () {
     return {
-      msg: 'Hidden Agency'
+      msg: 'Besides One'
     }
   }
 }
