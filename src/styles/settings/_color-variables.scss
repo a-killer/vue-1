@@ -1,1 +1,17 @@
+/*
+* HIDDEN
+*/
+
+/* COLOUR VARIABLES
+============================================================================= */
+
 $c-primary: #42b983;
+
+// INTERFACE COLOURS
+$primary: #404d57;
+$directive: #4A4A4A;
+$white: #ffffff;
+$black: #000000;
+$directiveLighten: lighten($directive, 20%) !default;
+$directiveBright: lighten($directive, 55%) !default;
+$directiveDarken: darken($directive, 20%) !default;

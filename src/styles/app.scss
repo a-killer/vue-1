@@ -1,3 +1,11 @@
+/**
+ * HIDDEN
+ */
+
+ /* BASE STRUCTURE
+ ============================================================================= */
+
+
 html, body {
   height:100vh;
   font-size: 14px;
@@ -28,6 +36,14 @@ body {
   height:100vh;
 }
 
+.content {
+	padding-top: 10rem;
+}
+
+
+/* PAGE TRANSITION ANIMATION
+============================================================================= */
+
 .fade-enter-active, .fade-leave-active {
   transition-property: opacity;
   transition-duration: .25s;
@@ -41,6 +57,9 @@ body {
   opacity: 0
 }
 
+
+/* MASTHEAD
+============================================================================= */
 
 .branding {
 	position: fixed;
@@ -62,10 +81,8 @@ body {
 }
 
 
-.content {
-	padding-top: 10rem;
-}
-
+/* CIRCLE IMAGE + SIZES
+============================================================================= */
 
 .hector {
 	border-radius: 50%;

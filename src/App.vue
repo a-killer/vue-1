@@ -1,10 +1,6 @@
 <template>
   <div class="app">
     
-    <div class="branding">
-      <img src="./assets/images/1.gif" height="200" class="hector size-60">
-    </div>
-
     <Masthead/>
 
     <!--<transition name="fade">-->
@@ -16,7 +12,7 @@
 </template>
 
 <script>
-import Masthead from './components/Masthead.vue'
+import Masthead from './components/Masthead.vue';
 export default {
   name: 'App',
   components: {
@@ -41,4 +37,14 @@ export default {
 
 <style scoped>
   @import "https://cdn.jsdelivr.net/npm/animate.css@3.5.1";
+  .block {
+    pointer-events: none;
+    position: relative;
+    width: 128px;
+    height: 128px;
+    margin: 1px;
+    background-color: currentColor;
+    font-size: 12px;
+    color: #2c3e50;
+  }
 </style>
