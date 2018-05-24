@@ -1,6 +1,10 @@
 <template>
   <div class="app">
     
+    <div class="branding">
+      <img src="./assets/images/1.gif" height="200" class="hector size-60">
+    </div>
+
     <Masthead/>
 
     <!--<transition name="fade">-->
