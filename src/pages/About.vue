@@ -32,13 +32,7 @@
               </div>
            </div>
       </div>
-
-      <div class="section">
-         <div class="container">
-            <button @click="go">Click Here to Animate</button>
-            <div class="block" ref="square"></div>
-         </div>
-      </div>    
+ 
 
     </div>  
 
@@ -46,7 +40,6 @@
 </template>
 
 <script>
-import { translate } from "../animate";
 export default {
   name: 'About',
   beforeCreate: function() {
@@ -56,25 +49,7 @@ export default {
     return {
       msg: 'Besides One'
     }
-  },
-  methods: {
-    go() {
-      translate(this.$refs.square);
-    }
   }
 }
 </script>
 
-
-<style scoped>
-  .block {
-    pointer-events: none;
-    position: relative;
-    width: 128px;
-    height: 128px;
-    margin: 1px;
-    background-color: currentColor;
-    font-size: 12px;
-    color: #2c3e50;
-  }
-</style>
