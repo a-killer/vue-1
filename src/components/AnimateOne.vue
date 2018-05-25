@@ -1,6 +1,6 @@
 <template>
   <div class="animateOne">
-     <button @click="go">*</button>
+     <a @click="go"></a>
       <div class="block" ref="square"></div>
   </div>
 </template>

@@ -7,8 +7,9 @@
     
     <nav class="navigation">
       <ul>
-      <li><router-link :to="{ name: 'Home' }">Home</router-link></li>
-      <li><router-link :to="{ name: 'About' }">About</router-link></li>
+      <li><router-link :to="{ name: 'Home' }" exact>Home</router-link></li>
+      <li><router-link :to="{ name: 'About' }" exact>About</router-link></li>
+      <li><router-link :to="{ name: 'Project' }" exact>Project</router-link></li>
       </ul>
     </nav>
   </div>
