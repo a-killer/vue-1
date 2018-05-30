@@ -2,6 +2,8 @@
   <div class="about page">
 
     <div class="content">
+
+      <div class="child-page box flex">
       
       <div class="section">
         <div class="container">
@@ -32,6 +34,8 @@
               </div>
            </div>
       </div>
+
+    </div>
  
 
     </div>  

@@ -2,13 +2,7 @@
   <div class="example1 page">
     
     <div class="content">
-
-         <div class="section">
-            <div class="container">
-                <Particle></Particle>
-             </div>
-        </div>
-      
+      <Particle></Particle>
     </div>
 
   </div>
@@ -18,7 +12,7 @@
 import Particle from '../components/Particle.vue';
 
 export default {
-  name: 'Project',
+  name: 'Example1',
   components: {
     Particle,
   },

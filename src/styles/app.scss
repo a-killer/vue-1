@@ -15,7 +15,6 @@ body {
   font-family: $ff-base;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ff00ff;
   	&.home {
 		background: #e6fff7;
 	}
@@ -23,6 +22,12 @@ body {
 		background: #e6ffe6;
 	}
 	&.project {
+		background: #00FFFF;
+	}
+	&.example1 {
+		background: #e6ffe6;
+	}
+	&.example2 {
 		background: #00FFFF;
 	}	
 }

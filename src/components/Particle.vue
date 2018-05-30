@@ -20,7 +20,7 @@ export const defaultAnimationSpeed = 1,
 export const triggers = document.getElementsByTagName('span')
 
 export default {
-  name: 'Partcile',
+  name: 'Particle',
   data: function () {
     return {
       scene:null, 
@@ -243,6 +243,9 @@ Power2.easeOut, speed: normalSpeed, delay: 0.2});
 </script>
 
 <style scoped>
+.particle {
+  z-index: 400000;
+}
 .triggers {
   bottom: 20px;
   color: white;
@@ -251,7 +254,8 @@ Power2.easeOut, speed: normalSpeed, delay: 0.2});
   text-align: center;
   transform: translateX(-50%);
   width: 100%;
-  z-index: 10;
+  background:red;
+  z-index: 500000;
 }
 .triggers span {
   cursor: pointer;
