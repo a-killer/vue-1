@@ -12,12 +12,12 @@
 import Particle from '../components/Particle.vue';
 
 export default {
-  name: 'Example1',
+  name: 'home',
   components: {
     Particle,
   },
   beforeCreate: function() {
-      document.body.className = 'example1';
+      document.body.className = 'home';
   }
 }
 </script>
