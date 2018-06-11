@@ -35,6 +35,7 @@ export default {
   @import "../node_modules/bulma/sass/layout/_all.sass";
   @import "../node_modules/bulma/sass/elements/container.sass";
   @import "../node_modules/bulma/sass/elements/image.sass";
+  @import "../node_modules/bulma/sass/components/level.sass";
   @import "../node_modules/bulma/sass/components/media.sass";
   @import "../node_modules/bulma/sass/components/menu.sass";
   @import "../node_modules/bulma/sass/components/navbar.sass";

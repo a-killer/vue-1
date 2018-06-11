@@ -1,10 +1,6 @@
 <template>
-  <div class="home page">
-    
-    <div class="content">
+  <div class="canvas page">
       <Particle></Particle>
-    </div>
-
   </div>
 </template>
 
@@ -17,7 +13,7 @@ export default {
     Particle,
   },
   beforeCreate: function() {
-      document.body.className = 'home';
+      document.body.className = 'canvas';
   }
 }
 </script>

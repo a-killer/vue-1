@@ -1,5 +1,5 @@
 <template>
-  <div class="projects page">
+  <div class="work page">
     
     <div class="content">
 
@@ -39,9 +39,9 @@
 
 <script>
 export default {
-  name: 'Projects',
+  name: 'Work',
   beforeCreate: function() {
-      document.body.className = 'projects';
+      document.body.className = 'light';
   }
 }
 </script>

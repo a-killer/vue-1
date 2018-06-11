@@ -2,6 +2,10 @@
  * HIDDEN
  */
 
+ $black: #000000;
+ $white: #ffffff;
+ $red: #ff0000;
+
  /* BASE STRUCTURE
  ============================================================================= */
 
@@ -15,21 +19,57 @@ body {
   font-family: $ff-base;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  	&.home {
-		background: #e6fff7;
+  	&.canvas {
+		background: none;
+		.branding a {
+			background: url('../assets/svg/hidden-white.svg') 0 0 no-repeat;
+		}
+		.navigation {
+ 			a {
+ 				color:$white;
+ 			}
+ 			a:hover,
+			a.router-link-active,
+			a.router-link-exact-active {
+		   		color: $red;
+		   		cursor: pointer;
+		 	}
+		}
 	}
-	&.about {
-		background: #e6ffe6;
+  	&.dark {
+		background: $black;
+		.branding a {
+			background: url('../assets/svg/hidden-white.svg') 0 0 no-repeat;
+		}
+		.navigation {
+ 			a {
+ 				color:$white;
+ 			}
+ 			a:hover,
+			a.router-link-active,
+			a.router-link-exact-active {
+		   		color: $red;
+		   		cursor: pointer;
+		 	}
+		}
 	}
-	&.project {
-		background: #00FFFF;
+	&.light {
+		background: $white;
+		.branding a {
+			background: url('../assets/svg/hidden-black.svg') 0 0 no-repeat;
+		}
+		.navigation {
+ 			a {
+ 				color:$black;
+ 			}
+ 			a:hover,
+			a.router-link-active,
+			a.router-link-exact-active {
+		   		color: $red;
+		   		cursor: pointer;
+		 	}
+		}
 	}
-	&.example1 {
-		background: #e6ffe6;
-	}
-	&.example2 {
-		background: #00FFFF;
-	}	
 }
 
 body.project {
@@ -38,7 +78,7 @@ body.project {
 	}
 }
 
-body.projects {
+body.work {
 	.page {
 		padding-top: 100px;
 	}
@@ -64,6 +104,16 @@ body.projects {
 
 .content {
 	//padding-top: 10rem;
+	h1 {
+		text-transform: uppercase;
+		font-size:1rem;
+		margin-bottom: 2.2rem;
+	}
+	p {
+		font-size:1rem;
+		line-height: 1.5rem;
+		margin-bottom: 2rem;
+	}
 }
 
 
@@ -87,50 +137,39 @@ body.projects {
 /* MASTHEAD
 ============================================================================= */
 
-.branding {
-	position: fixed;
-	top:25px;
-	left: 25px;
-	width: 60px;
-	height: 60px;
-	z-index: 100000;
-	a {
-		width: 60px;
-		height: 60px;
-		display: block;
+.masthead {
+	padding: 1rem 4rem 0 4rem;
+	z-index: 2;
+
+	.branding {
+		width: 114px;
+		height: 26px;
+		a {
+			background: url('../assets/svg/hidden-black.svg') 0 0 no-repeat;
+			width: 114px;
+			height: 26px;
+			display: block;
+		}
 	}
+
+	.navigation {
+		.level-item {
+			text-transform: uppercase;
+		}
+	}
+
 }
 
 
-.navigation {
-	position: fixed;
-	top:45px;
-	//left:0; // set this to make list centered
-	left: 110px;
-	width: 100%;
-	height: 60px;
-	//text-align:center; // centering li items within container
-	z-index: 90000;
-	
- 	ul {
- 		li {
- 			display: inline-block;
- 			padding: 0 15px;
- 			a {
- 				color:#000;
- 			}
- 			a:hover,
-			a.router-link-active,
-			a.router-link-exact-active {
-		   		color: #ff0000;
-		   		cursor: pointer;
-		 	}
- 		}
- 	}
+
+.level-right .level-item:not(:last-child) {
+    margin-right: 2.5rem!important;
 }
 
-body.project .navigation a { color:#fff; }
-body.home .navigation a { color:#fff; }
+
+
+
+
 
 
 
@@ -166,7 +205,7 @@ body.home .navigation a { color:#fff; }
 	left: 25px;
 	width: 60px;
 	height: 60px;
-	z-index:90000;
+	z-index:1;
 	a {
 		display: block;
 		width: 60px;
@@ -197,15 +236,24 @@ body.home .navigation a { color:#fff; }
   padding: .25rem;
   }
 }
+
+/* 	CANVAS LAYOUT
+============================================================================= */
+
 .example1 canvas {
     position: absolute;
-    z-index: 199;
+    z-index: 0;
     top: 0;
 }
 
-.home canvas {
+body.canvas canvas {
     position: absolute;
-    z-index: 199;
+    z-index: -1;
+    top: 0;
+}
+.canvas canvas {
+    position: absolute;
+    z-index: 0;
     top: 0;
 }
 

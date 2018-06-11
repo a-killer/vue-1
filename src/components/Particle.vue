@@ -1,10 +1,9 @@
 <template>
   <div class="particle">
-    <p>Particle</p>
     <div class="triggers">
-      <span data-disabled="true" data-color="#3D8CD0">CLICK</span>
-      <span data-disabled="true" data-color="#D32A7B">TO</span>
-      <span data-disabled="true" data-color="#2AD37A">SWITCH</span>
+      <span data-disabled="true" data-color="#ff00ff">HIDDEN</span>
+      <span data-disabled="true" data-color="#D32A7B">BOO!</span>
+      <span data-disabled="true" data-color="#2AD37A">BANDITS</span>
     </div>
   </div>
 </template>
@@ -45,11 +44,11 @@ export default {
   },
   created () {
    // Options
-const particleCount = 6000;
+const particleCount = 60000;
     
-const particleSize = .3;
+const particleSize = .2;
 
-const defaultAnimationSpeed = 1,
+const defaultAnimationSpeed = 0.6,
     morphAnimationSpeed = 18,
       color = '#FFFFFF';
 
@@ -76,7 +75,7 @@ window.addEventListener('resize', fullScreen, false)
 var scene = new THREE.Scene();
 
 // Camera and position
-var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
+var camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 10000 );
 
 camera.position.y = -45;
 camera.position.z = 45;
@@ -180,7 +179,7 @@ const normalSpeed = (defaultAnimationSpeed/100),
 let animationVars = {
   speed: normalSpeed,
   color: color,
-  rotation: -45
+  rotation: -0
 }
 
 
@@ -244,18 +243,17 @@ Power2.easeOut, speed: normalSpeed, delay: 0.2});
 
 <style scoped>
 .particle {
-  z-index: 400000;
+  z-index: 0;
 }
 .triggers {
+  display: block;
   bottom: 20px;
   color: white;
-  left: 50%;
-  position: absolute;
+  position: fixed;
   text-align: center;
-  transform: translateX(-50%);
   width: 100%;
-  background:red;
-  z-index: 500000;
+  height: 20px;
+  z-index: 3;
 }
 .triggers span {
   cursor: pointer;
