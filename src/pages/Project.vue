@@ -110,7 +110,7 @@
 export default {
   name: 'Project',
   beforeCreate: function() {
-      document.body.className = 'project';
+      document.body.className = 'light';
   }
 }
 </script>

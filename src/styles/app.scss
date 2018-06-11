@@ -92,8 +92,11 @@ body.work {
 
 .page {
   position: fixed;
+  top: 40px;
+  left: 0;
   width: 100%;
-  height:100vh;
+  height: calc(100vh - 40px);
+  z-index: 0;
   .child-page {
   	position:relative;
   	display: block;
@@ -259,10 +262,14 @@ body.canvas canvas {
 
 
 
-/* 	PROJECTS
+/* 	WORK
 ============================================================================= */
 
-.projects {
+.work .content {
+	padding-top: 130px;
+}
+
+.work {
 	figure {
 		img {
 			object-fit: cover;
@@ -270,3 +277,6 @@ body.canvas canvas {
 	}
 }
 
+
+/* CIRCLE IMAGE + SIZES
+============================================================================= */
