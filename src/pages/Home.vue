@@ -13,7 +13,8 @@ export default {
     Particle,
   },
   beforeCreate: function() {
-      document.body.className = 'canvas';
+      //document.body.className = 'canvas';
+      document.body.className = ["canvas"];
   }
 }
 </script>

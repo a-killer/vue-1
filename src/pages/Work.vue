@@ -41,7 +41,7 @@
 export default {
   name: 'Work',
   beforeCreate: function() {
-      document.body.className = 'light';
+      document.body.className = 'light killer';
   }
 }
 </script>

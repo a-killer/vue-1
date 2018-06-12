@@ -104,8 +104,7 @@ body.work {
 }
 
 // for pages that requir scrolling
-.project.page,
-.work.page {
+body.killer .page {
 	position:relative;
 	top: 0;
 	height: 100vh
@@ -137,7 +136,7 @@ body.work {
 }
 
 .fade-enter-active {
-  transition-delay: .25s;
+  transition-delay: 5s;
 }
 
 .fade-enter, .fade-leave-active {

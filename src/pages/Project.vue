@@ -110,7 +110,7 @@
 export default {
   name: 'Project',
   beforeCreate: function() {
-      document.body.className = 'light';
+      document.body.className = 'light killer';
   },
   data () {
     return {
