@@ -104,11 +104,14 @@ body.work {
 }
 
 // for pages that requir scrolling
-.project.page {
+.project.page,
+.work.page {
 	position:relative;
 	top: 0;
 	height: 100vh
 }
+
+
 
 .content {
 	//padding-top: 10rem;

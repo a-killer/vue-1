@@ -111,6 +111,11 @@ export default {
   name: 'Project',
   beforeCreate: function() {
       document.body.className = 'light';
+  },
+  data () {
+    return {
+      msg: 'Creative Agency * Next Generation * Bandits'
+    }
   }
 }
 </script>

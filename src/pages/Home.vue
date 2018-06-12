@@ -1,5 +1,5 @@
 <template>
-  <div class="canvas page">
+  <div class="canvas page" v-cloak>
       <Particle></Particle>
   </div>
 </template>
@@ -17,3 +17,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  [v-cloak] {
+    display: none;
+  }
+</style>
