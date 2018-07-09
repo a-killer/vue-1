@@ -28,9 +28,9 @@ export default {
     */
     return {
       pages: [
-        // {id:1, type:"image", src:"/static/img/3.jpg"},
-        // {id:2, type:"image", src:"/static/img/4.jpg"},
-        // {id:3, type:"image", src:"/static/img/5.jpg"},
+        {id:1, type:"image", src:"/static/img/3.jpg"},
+        {id:2, type:"image", src:"/static/img/4.jpg"},
+        {id:3, type:"image", src:"/static/img/5.jpg"},
         {id:4, type:"video", src:"/static/img/Swans - 1287.mp4", poster:"/static/img/swan-poster.png"},
         {id:5, type:"video", src:"/static/img/Countdown - 2637.mp4", poster:"/static/img/countdown-poster.png"},
       ],
