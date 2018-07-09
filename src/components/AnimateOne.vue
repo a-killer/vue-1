@@ -1,17 +1,17 @@
 <template>
   <div class="animateOne">
-     <a @click="go"></a>
-      <div class="block" ref="square"></div>
+    <a @click="go"></a>
+    <div ref="square" class="block"></div>
   </div>
 </template>
 
 <script>
-import { translate } from "../animate";
+import { translate } from '../animate'
 export default {
   name: 'AnimateOne',
   methods: {
-    go() {
-      translate(this.$refs.square);
+    go( ) {
+      translate(this.$refs.square)
     }
   }
 }

@@ -1,20 +1,21 @@
 <template>
-  <div class="canvas page" v-cloak>
-      <Particle></Particle>
+  <div>
+
   </div>
 </template>
 
 <script>
-import Particle from '../components/Particle.vue';
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
-    Particle,
   },
-  beforeCreate: function() {
-      //document.body.className = 'canvas';
-      document.body.className = ["canvas"];
+  data( ) {
+    return {
+
+    }
+  },
+  beforeCreate: function( ) {
   }
 }
 </script>

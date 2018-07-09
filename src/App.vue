@@ -1,15 +1,15 @@
 <template>
   <div class="app">
-    
+
     <Masthead/>
-    
 
     <div class="animation-one">
       <AnimateOne/>
     </div>
 
     <!--<transition name="fade">-->
-    <transition name="router-anim" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+    <transition name="router-anim" enter-active-class="animated fadeIn"
+    leave-active-class="animated fadeOut">
     <router-view/>
     </transition>
 
@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import AnimateOne from './components/AnimateOne.vue';  
-import Masthead from './components/Masthead.vue';
+import AnimateOne from './components/AnimateOne.vue'
+import Masthead from './components/Masthead.vue'
 export default {
   name: 'App',
   components: {
