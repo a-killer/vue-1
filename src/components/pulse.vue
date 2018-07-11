@@ -30,7 +30,7 @@ export default {
     };
 
     mouseY = (event) => {
-      return event.clientY - clientRect.top;
+      return event.clientY - clientRect.top + window.scrollY;
     };
 
     positionElement = (event) => {
