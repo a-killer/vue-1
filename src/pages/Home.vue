@@ -17,12 +17,13 @@
 <script>
 import fimage from '../components/fimage.vue'
 import fvideo from '../components/fvideo.vue'
-
+import typeface from '../components/typeface.vue'
 export default {
   name: 'Home',
   components: {
     fimage,
     fvideo,
+    typeface,
   },
   data() {
     /*
@@ -30,7 +31,7 @@ export default {
 
     Image type template: {id:1, type:"image", src:"/static/img/3.jpg"},
     Video type template: {id:4, type:"video", src:"/static/img/Swans - 1287.mp4", poster:"/static/img/swan-poster.png"},
-
+    Custom Component type template { id: 5, type:"component", component: Particle} //where name is the </element> tag
     */
     return {
       pages: [
@@ -39,6 +40,7 @@ export default {
         {id:3, type:"image", src:"/static/img/5.jpg"},
         {id:4, type:"video", src:"/static/img/Swans - 1287.mp4", poster:"/static/img/swan-poster.png"},
         {id:5, type:"video", src:"/static/img/Countdown - 2637.mp4", poster:"/static/img/countdown-poster.png"},
+        {id:6, type:"component", component:typeface},
       ],
       page: null,
       lastScrollTop:0,
@@ -133,6 +135,9 @@ export default {
       }
       if(item.type == "video") {
         return fvideo;
+      }
+      if(item.type == "component") {
+        return item.component;
       }
       throw "Cannot choose type";
     }
