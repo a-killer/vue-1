@@ -22,7 +22,7 @@ export default {
   name: 'Particle',
   data: function () {
     return {
-      scene:null, 
+      scene:null,
     }
   },
   methods: {
@@ -45,7 +45,7 @@ export default {
   created () {
    // Options
 const particleCount = 60000;
-    
+
 const particleSize = .2;
 
 const defaultAnimationSpeed = 0.6,
@@ -103,18 +103,18 @@ var typeface = 'https://dl.dropboxusercontent.com/s/bkqic142ik0zjed/swiss_black_
 
 loader.load( typeface, ( font ) => {
   Array.from(triggers).forEach((trigger, idx) => {
-    
+
     texts[idx] = {};
-    
+
     texts[idx].geometry = new THREE.TextGeometry( trigger.textContent, {
       font: font,
       size: window.innerWidth * 0.02,
       height: 4,
       curveSegments: 10,
     });
-    
+
     THREE.GeometryUtils.center( texts[idx].geometry )
-      
+
 
     texts[idx].particles = new THREE.Geometry();
 
@@ -123,7 +123,7 @@ loader.load( typeface, ( font ) => {
     createVertices(texts[idx].particles, texts[idx].points)
 
     enableTrigger(trigger, idx);
-    
+
   });
 });
 
@@ -149,14 +149,14 @@ function createVertices (emptyArray, points) {
 }
 
 function enableTrigger(trigger, idx){
-  
-  
+
+
   trigger.setAttribute('data-disabled', false);
-  
+
   trigger.addEventListener('click', () => {
     morphTo(texts[idx].particles, trigger.dataset.color);
   })
-  
+
   if (idx == 0) {
     morphTo(texts[idx].particles, trigger.dataset.color);
   }
@@ -184,16 +184,16 @@ let animationVars = {
 
 
 function animate() {
-  
+
   particleSystem.rotation.y += animationVars.speed;
-  particles.verticesNeedUpdate = true; 
-  
+  particles.verticesNeedUpdate = true;
+
   camera.position.z = animationVars.rotation;
   camera.position.y = animationVars.rotation;
   camera.lookAt( scene.position );
-  
+
   particleSystem.material.color = new THREE.Color( animationVars.color );
-  
+
   window.requestAnimationFrame( animate );
   renderer.render( scene, camera );
 }
@@ -201,41 +201,41 @@ function animate() {
 animate();
 
 function morphTo (newParticles, color = '#FFFFFF') {
-  
+
   TweenMax.to(animationVars, .1, {
-    ease: Power4.easeIn, 
-    speed: fullSpeed, 
+    ease: Power4.easeIn,
+    speed: fullSpeed,
     onComplete: slowDown
   });
-  
+
   TweenMax.to(animationVars, 2, {
-    ease: Linear.easeNone, 
+    ease: Linear.easeNone,
     color: color
   });
-  
-  
+
+
   // particleSystem.material.color.setHex(color);
-  
+
   for (var i = 0; i < particles.vertices.length; i++){
     TweenMax.to(particles.vertices[i], 2, {
-      ease: Elastic.easeOut.config( 0.1, .3), 
+      ease: Elastic.easeOut.config( 0.1, .3),
       x: newParticles.vertices[i].x,
-      y: newParticles.vertices[i].y, 
+      y: newParticles.vertices[i].y,
       z: newParticles.vertices[i].z
     })
   }
-  
+
   console.log(animationVars.rotation)
-  
+
   TweenMax.to(animationVars, 2, {
-    ease: Elastic.easeOut.config( 0.1, .3), 
+    ease: Elastic.easeOut.config( 0.1, .3),
     rotation: animationVars.rotation == 45 ? -45 : 45,
   })
 }
 function slowDown () {
   TweenMax.to(animationVars, 0.3, {ease:
 Power2.easeOut, speed: normalSpeed, delay: 0.2});
-} 
+}
   }
 
 }
